@@ -63,6 +63,7 @@
 		E2E8202D219E68E200BB4E62 /* TestMSAppcenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMSAppcenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E82031219E68E200BB4E62 /* TestMSAppcenterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMSAppcenterUITests.m; sourceTree = "<group>"; };
 		E2E82033219E68E200BB4E62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2E8203F219EA5D200BB4E62 /* TestMSAppcenter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestMSAppcenter.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +142,7 @@
 		E2E8200C219E68E100BB4E62 /* TestMSAppcenter */ = {
 			isa = PBXGroup;
 			children = (
+				E2E8203F219EA5D200BB4E62 /* TestMSAppcenter.entitlements */,
 				E2E8200D219E68E100BB4E62 /* AppDelegate.h */,
 				E2E8200E219E68E100BB4E62 /* AppDelegate.m */,
 				E2E82010219E68E100BB4E62 /* ViewController.h */,
@@ -242,6 +244,11 @@
 				TargetAttributes = {
 					E2E82009219E68E100BB4E62 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					E2E82021219E68E200BB4E62 = {
 						CreatedOnToolsVersion = 10.1;
@@ -548,14 +555,18 @@
 			baseConfigurationReference = A99039F8E1F7076FB90B8B8E /* Pods-TestMSAppcenter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestMSAppcenter/TestMSAppcenter.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFCS8MMXQ3;
 				INFOPLIST_FILE = TestMSAppcenter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cathay.TestMSAppcenter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cathay.koko.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -565,14 +576,18 @@
 			baseConfigurationReference = 16BC133ED92F0FA81019B3F4 /* Pods-TestMSAppcenter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestMSAppcenter/TestMSAppcenter.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFCS8MMXQ3;
 				INFOPLIST_FILE = TestMSAppcenter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cathay.TestMSAppcenter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cathay.koko.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -583,6 +598,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFCS8MMXQ3;
 				INFOPLIST_FILE = TestMSAppcenterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -602,6 +618,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFCS8MMXQ3;
 				INFOPLIST_FILE = TestMSAppcenterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -619,7 +636,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 60F6B15F13716242AD32D584 /* Pods-TestMSAppcenterUITests.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFCS8MMXQ3;
 				INFOPLIST_FILE = TestMSAppcenterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -628,6 +647,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cathay.TestMSAppcenterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TestMSAppcenter;
 			};
@@ -637,7 +657,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4EFC0F7E7A89F308F48BDD4D /* Pods-TestMSAppcenterUITests.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFCS8MMXQ3;
 				INFOPLIST_FILE = TestMSAppcenterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -646,6 +668,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cathay.TestMSAppcenterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TestMSAppcenter;
 			};

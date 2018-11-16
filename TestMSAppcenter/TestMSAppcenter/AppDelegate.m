@@ -10,6 +10,8 @@
 #import <AppCenter/AppCenter.h>
 #import <AppCenterAnalytics/AppCenterAnalytics.h>
 #import <AppCenterCrashes/AppCenterCrashes.h>
+#import <AppCenterPush/AppCenterPush.h>
+
 
 @interface AppDelegate ()
 
@@ -23,6 +25,7 @@
     [MSAppCenter start:@"8101f153-a56b-4ddd-8d11-0ffac846b824"
           withServices:@[ [MSAnalytics class], [MSCrashes class]
                           ]];
+    [MSAppCenter start:@"b7a41529-a092-4566-b997-b9bbd1157f4c" withServices:@[[MSPush class]]];
     return YES;
 }
 

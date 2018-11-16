@@ -33,6 +33,29 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    [[[XCUIApplication alloc] init].buttons[@"mybutton"] tap];
+    
+    
+    
+}
+
+- (void)testInput {
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.buttons[@"mybutton"] tap];
+    [app.alerts[@"hello"].buttons[@"確定"] tap];
+    [app.textFields[@"mytext"] tap];
+    
+    XCUIElement *aKey = app/*@START_MENU_TOKEN@*/.keys[@"a"]/*[[".keyboards.keys[@\"a\"]",".keys[@\"a\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [aKey tap];
+    [aKey tap];
+    [app/*@START_MENU_TOKEN@*/.keys[@"b"]/*[[".keyboards.keys[@\"b\"]",".keys[@\"b\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+    [app.keys[@"b"] tap];
+    [app/*@START_MENU_TOKEN@*/.keys[@"b"]/*[[".keyboards.keys[@\"b\"]",".keys[@\"b\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+
+    
+    
+    
 }
 
 @end

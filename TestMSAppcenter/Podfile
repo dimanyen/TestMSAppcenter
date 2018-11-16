@@ -8,6 +8,7 @@ target 'TestMSAppcenter' do
   # Pods for TestMSAppcenter
 
   pod 'AppCenter'
+  pod 'AppCenter/Push'
 
   target 'TestMSAppcenterTests' do
     inherit! :search_paths
